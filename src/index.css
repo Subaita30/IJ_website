@@ -1,0 +1,34 @@
+
+:root {
+  --color-primary: #D2223E;
+  --color-secondary: #223752;
+  --color-background: #F9FAFB;
+}
+
+@import "tailwindcss";
+
+
+.cardText {
+  font-family: Fraunces;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-right {
+  animation: marquee-right 35s linear infinite;
+}
