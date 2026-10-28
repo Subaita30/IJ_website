@@ -148,7 +148,7 @@ function Home() {
                             <h2 className="text-[clamp(2rem,6vw,5.5rem)] font-black uppercase leading-[0.86] tracking-[-0.06em] text-black">
                                 Into Business
                                 <br />
-                                <span className="text-[#D2223E]">Growth.</span>
+                                <span className="text-[#D2223E]">Growth</span>
                             </h2>
                         </div>
 
