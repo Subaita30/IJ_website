@@ -14,7 +14,7 @@ const navItems = [
 
 function Navbar() {
   return (
-    <nav className="mx-auto flex w-full max-w-[1400px] flex-wrap items-center justify-between gap-5 bg-transparent px-6 pt-7 sm:px-10 lg:px-16">
+    <nav className="mx-auto flex w-full max-w-[1400px] flex-wrap items-center justify-between gap-5 bg-transparent px-6 pt-7 sm:px-10 lg:px-18">
       <Link to="/" className="shrink-0">
         <img
           src={logo}

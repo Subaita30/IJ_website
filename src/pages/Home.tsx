@@ -17,44 +17,8 @@ import brand12 from "../assets/brand12.jpeg";
 import brand13 from "../assets/brand13.jpeg";
 import brand15 from "../assets/brand14.jpeg";
 import ij_about from "../assets/ij_about.jpg";
-
+import ij5 from "../assets/ij5.png";
 import { Link } from "react-router-dom";
-// import {
-//     FaFacebookF,
-//     FaInstagram,
-//     FaLinkedinIn,
-//     FaTiktok,
-//     FaYoutube,
-// } from "react-icons/fa6";
-// import Navbar from "../navigation/Navbar";
-
-// const socials = [
-//     {
-//         name: "Facebook",
-//         url: "https://www.facebook.com/YOUR_USERNAME",
-//         Icon: FaFacebookF,
-//     },
-//     {
-//         name: "Instagram",
-//         url: "https://www.instagram.com/YOUR_USERNAME",
-//         Icon: FaInstagram,
-//     },
-//     {
-//         name: "LinkedIn",
-//         url: "https://www.linkedin.com/in/YOUR_USERNAME",
-//         Icon: FaLinkedinIn,
-//     },
-//     {
-//         name: "TikTok",
-//         url: "https://www.tiktok.com/@YOUR_USERNAME",
-//         Icon: FaTiktok,
-//     },
-//     {
-//         name: "YouTube",
-//         url: "https://www.youtube.com/@YOUR_USERNAME",
-//         Icon: FaYoutube,
-//     },
-// ];
 const images= [
                     { name: "Brand 1", src: brand1 },
                     { name: "Brand 2", src: brand2 },
@@ -112,59 +76,78 @@ function Home() {
 
         return () => observer.disconnect();
         }, []);
+
+        const [heroLoaded, setHeroLoaded] = useState(false);
+
+            useEffect(() => {
+            const timer = window.setTimeout(() => {
+                setHeroLoaded(true);
+            }, 100);
+
+            return () => window.clearTimeout(timer);
+            }, []);
   
     return (
-        <main className="mx-auto max-w-[1440px] min-h-screen overflow-hidden bg-[#F9FAFB] text-[#223752]">
+        <main className="min-h-screen overflow-hidden bg-[#F9FAFB] text-[#223752]">
 
 
             {/* Hero portrait */}
-            <section className="px-4 pb-12 pt-10 sm:px-8 sm:pt-14 lg:px-12">
+            <section className="px-4 pb-12 pt-10 lg:px-12 lg:pt-2">
                 <div className="relative">
 
 
 
                     {/* Image with overlapping typography */}
 
-                    <div className="relative isolate mx-auto h-[570px] max-w-[1440px] overflow-hidden rounded-sm lg:h-[680px]">
-
+                    <div className="relative isolate h-[570px] overflow-hidden rounded-sm lg:h-[600px]">
+                        <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#D2223E]/20 blur-xl" />
+                        <div className="pointer-events-none absolute -right-10 bottom-0 h-80 w-80 rounded-full bg-[#223752]/20 blur-xl" />
                         {/* Centered full portrait */}
                         <img
-                            src="https://imtiajjehad.com/wp-content/uploads/2025/05/1234-1008.png"
+                            src={ij5}
                             alt="Portrait of Imtiaj Jehad"
-                            className="absolute inset-0 z-0 h-full w-full object-contain object-center"
+                            className="absolute inset-0 z-0 h-full w-full object-contain object-center -translate-x-3 -translate-y-4 lg:-translate-x-8 lg:-translate-y-0"
                         />
 
                         {/* Upper-left headline */}
-                        <div className="absolute left-4 top-7 z-10 sm:left-8 sm:top-10 lg:left-12 lg:top-12">
-                            <h1 className="text-[clamp(2rem,6.5vw,6rem)] font-black uppercase leading-[0.82] tracking-[-0.065em] text-black">
-                                Turning
-                                <br />
-                                <span className="text-[#D2223E]">Bold Ideas</span>
-                            </h1>
-                        </div>
+                        <div
+                        className={`absolute left-4 top-7 z-10 transition-all duration-700 ease-out sm:left-8 sm:top-10 lg:left-12 lg:top-12 ${
+                            heroLoaded
+                            ? "translate-y-0 opacity-100"
+                            : "-translate-y-8 opacity-0"
+                        }`}
+                        >
+                        <h1 className="text-[clamp(2rem,6vw,5.5rem)] font-black uppercase leading-[0.82] tracking-[-0.065em] text-black">
+                            Turning
+                            <br />
+                            <span className="text-[#D2223E]">Bold Ideas</span>
+                        </h1>
+                        <p className="mt-5 max-w-md text-sm leading-6 text-[#223752] sm:mt-7 sm:text-base sm:leading-7 lg:text-lg">
+                            I am Imtiaj Jehad - a marketing strategist and entrepreneur
+                            helping brands grow through creative thinking, strategic
+                            marketing, and technology.
+                        </p>
+                    </div>
 
                         {/* Lower-right headline */}
-                        <div className="absolute bottom-5 right-4 z-10 text-right sm:bottom-40 sm:right-8 lg:bottom-12 lg:right-10">
-                            <h2 className="text-[clamp(2rem,6vw,5.5rem)] font-black uppercase leading-[0.86] tracking-[-0.06em] text-black">
-                                Into Business
-                                <br />
-                                <span className="text-[#D2223E]">Growth</span>
-                            </h2>
+                        <div
+                        className={`absolute bottom-42 right-4 z-10 text-right transition-all duration-700 ease-out sm:bottom-50 sm:right-8 lg:bottom-58 lg:right-10 ${
+                            heroLoaded
+                            ? "translate-y-0 opacity-100 delay-500"
+                            : "translate-y-8 opacity-0"
+                        }`}
+                        >
+                        <h2 className="text-[clamp(2rem,5vw,5rem)] font-black uppercase leading-[0.86] tracking-[-0.06em] text-black">
+                            Into Business
+                            <br />
+                            <span className="text-[#D2223E]">Growth</span>
+                        </h2>
                         </div>
 
                     </div>
 
 
-                    {/* Supporting text */}
-                    <div className="mt-8 grid gap-6 border-b border-[#D7DDE5] pb-8 md:grid-cols-[1.4fr_0.6fr] md:items-center md:gap-10 lg:mt-10 lg:gap-16">
-                        <p className="ml-4 max-w-3xl text-base leading-8 text-[#526174] sm:ml-8 sm:text-xl lg:ml-12 lg:text-2xl">
-                                I am Imtiaj Jehad — a marketing strategist and entrepreneur
-                                helping brands grow through creative thinking, strategic
-                                marketing, and technology.
-                        </p>
-
-                        
-                        {/* CTA Buttons: normal position first, fixed after scrolling */}
+                  {/* CTA Buttons: normal position first, fixed after scrolling */}
                         <div
                         className={
                             isScrolled
@@ -186,36 +169,12 @@ function Home() {
                             Let's Talk <span aria-hidden="true"></span>
                         </Link>
                         </div>
-
-
-                    </div>
-
-                    {/* Social links and footer label */}
-                    {/* <div className="flex flex-col gap-4 pt-5 sm:flex-row sm:items-center sm:justify-between">
-
-
-                        <div className="flex items-center gap-3">
-                            {socials.map(({ name, url, Icon }) => (
-                                <a
-                                    key={name}
-                                    href={url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={name}
-                                    title={name}
-                                    className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D0C4] text-[#403B34] transition hover:-translate-y-1 hover:border-[#9C603B] hover:bg-[#9C603B] hover:text-white"
-                                >
-                                    <Icon size={15} />
-                                </a>
-                            ))}
-                        </div>
-                    </div> */}
                 </div>
-
             </section>
-                        
+
+
             {/* L-shaped cards section */}
-            <section className="px-4 py-6 sm:px-0 lg:px-12 lg:py-0">
+            <section className="px-4 py-6 lg:px-12 lg:py-6">
 
             {/* Top row: two cards + statement */}
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -340,7 +299,7 @@ function Home() {
 
                         
             {/* About Introduction Section */}
-            <section className="px-4 py-14 sm:px-8 lg:px-12">
+            <section className="px-4 py-14 lg:px-12">
             <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
 
                 {/* Left: Image */}
@@ -391,7 +350,9 @@ function Home() {
 
             </div>
             </section>
+            
 
+            {/*services*/}
             <section
             ref={sectionRef}
             className="bg-[#F9FAFB] px-5 py-16 sm:px-8 lg:px-12"
@@ -459,7 +420,8 @@ function Home() {
            
             <ConsultService />
            
-
+            
+            
 
         </main>
     );

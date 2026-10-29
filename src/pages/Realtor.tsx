@@ -38,7 +38,7 @@ const realtorSocials = [
 function Realtor() {
   return (
     <section className="min-h-screen bg-white px-6 py-20">
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="3xl text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-amber-700">
           Meet Your Realtor
         </p>
