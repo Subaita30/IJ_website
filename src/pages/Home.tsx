@@ -18,6 +18,8 @@ import brand13 from "../assets/brand13.jpeg";
 import brand15 from "../assets/brand14.jpeg";
 import ij_about from "../assets/ij_about.jpg";
 import ij5 from "../assets/ij5.png";
+import ij6 from "../assets/ij6.png";
+
 import { Link } from "react-router-dom";
 const images= [
                     { name: "Brand 1", src: brand1 },
@@ -177,39 +179,39 @@ function Home() {
             <section className="px-4 py-6 lg:px-12 lg:py-6">
 
             {/* Top row: two cards + statement */}
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 
                 {/* Card 1 */}
                 <div className="flex min-h-48 flex-col justify-between rounded-2xl bg-[#D2223E] p-6 sm:p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl">
-                <h3 className="text-8xl font-bold tracking-tight text-white">
-                    10+
-                </h3>
-                <h1 className="text-xl font-semibold tracking-tight text-white">
-                    Years of experience running a marketing and tech company
+                    <h3 className="text-7xl font-bold tracking-tight text-white">
+                        10+
+                    </h3>
+                    <h1 className="text-xl font-semibold tracking-tight text-white">
+                        Years of experience running a marketing and tech company
 
-                </h1>
+                    </h1>
                 </div>
 
                 {/* Card 2 */}
                 <div className="flex min-h-48 flex-col justify-between rounded-2xl bg-[#223752] p-6 sm:p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl">
             
-                <h3 className="text-8xl font-bold tracking-tight text-white">
-                    400+
-                </h3>
-                <h1 className="text-xl font-semibold tracking-tight text-white">
-                    Clients served
+                    <h3 className="text-7xl font-bold tracking-tight text-white">
+                        400+
+                    </h3>
+                    <h1 className="text-xl font-semibold tracking-tight text-white">
+                        Clients served
 
 
-                </h1>
+                    </h1>
                 </div>
 
                 {/* Statement in the upper-right space */}
                 <div className="flex flex-col justify-center py-6 lg:pl-6">
                 
-                <h2 className="cardText text-4xl font-bold font-style:italic leading-tight tracking-tight sm:text-3xl">
-                     Turning innovative ideas into impactful results through creative marketing, technology, and strategic business solutions.
-                   
-                </h2>
+                    <h2 className="cardText text-4xl font-bold font-style:italic leading-tight tracking-tight sm:text-3xl">
+                        Turning innovative ideas into impactful results through creative marketing, technology, and strategic business solutions.
+                    
+                    </h2>
                 
                 </div>
             </div>
@@ -219,14 +221,14 @@ function Home() {
 
                 {/* Card 3 */}
                 <div className="flex min-h-48 flex-col justify-between rounded-2xl bg-[#ADBCDC] p-6 sm:p-8 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl">
-                <h3 className="text-7xl font-bold tracking-tight text-[#28251F]">
-                    7,000+
-                </h3>
-                <h1 className="text-xl font-semibold tracking-tight text-black">
-                    Creative copies written for social media
+                    <h3 className="text-7xl font-bold tracking-tight text-[#28251F]">
+                        7,000+
+                    </h3>
+                    <h1 className="text-xl font-semibold tracking-tight text-black">
+                        Creative copies written for social media
 
 
-                </h1>
+                    </h1>
                 </div>
 
                 {/* Card 4 */}
@@ -422,6 +424,110 @@ function Home() {
            
             
             
+            {/* MY APPROACH SECTION */}
+            <section
+            id="approach"
+            className="bg-[#F9FAFB] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+            >
+                <div className="mx-auto max-w-[1440px]">
+                        {/* Heading and introduction */}
+                    <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
+                        
+
+                        <h2 className="text-4xl font-bold tracking-tight text-[#223752] sm:text-5xl lg:text-6xl">
+                            From Insight <span className="text-[#D2223E]">to Impact</span>
+                        </h2>
+
+                        <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#526174] sm:text-lg sm:leading-8">
+                            I combine strategic thinking, creative execution, and continuous
+                            analysis to help businesses move forward with clarity and purpose.
+                        </p>
+
+                      <div className="mx-auto mt-7 h-1 w-16 rounded-full bg-[#D2223E]" /></div>
+
+                        {/* Portrait and six stages */}
+                        <div className="grid items-stretch gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+                            {/* Portrait */}
+                                <div className="relative mx-auto w-full max-w-[460px] lg:mx-0 lg:max-w-none">
+                                    <div className="absolute -bottom-3 -left-3 h-32 w-32 rounded-tl-[3rem] border-b-2 border-l-2 border-[#D2223E]/70" />
+
+                                    <div className="relative min-h-[420px] overflow-hidden rounded-sm sm:min-h-[560px]">
+                                        <img
+                                            src={ij6}
+                                            alt="Imtiaj Jehad"
+                                            className="absolute inset-0 h-full w-full object-contain object-top"
+                                        />
+                                    </div>
+                                </div>
+
+                            {/* Process cards */}
+                            <div className="grid content-start grid-cols-1 sm:grid-cols-2">
+                            {[
+                            {
+                                number: "01",
+                                title: "Research",
+                                description:
+                                "Understand the market, audience, and business objectives.",
+                            },
+                            {
+                                number: "02",
+                                title: "Data Analysis",
+                                description: "Turn insights and data into informed decisions.",
+                            },
+                            {
+                                number: "03",
+                                title: "Planning",
+                                description: "Build a focused strategy with clear priorities.",
+                            },
+                            {
+                                number: "04",
+                                title: "Execution",
+                                description:
+                                "Bring the strategy to life through purposeful action.",
+                            },
+                            {
+                                number: "05",
+                                title: "Monitoring",
+                                description:
+                                "Track progress and identify opportunities to improve.",
+                            },
+                            {
+                                number: "06",
+                                title: "Result Tracking",
+                                description: "Measure outcomes and refine the next steps.",
+                            },
+                            ].map((stage, index) => (
+                            <article
+                                key={stage.number}
+                                className={`group border-[#D7DDE5] py-6 transition-colors duration-300 hover:bg-white sm:px-5 sm:py-7 ${
+                                index < 4 ? "border-b" : ""
+                                } ${index % 2 === 0 ? "sm:border-r" : ""} ${
+                                index >= 4 ? "sm:border-t" : ""
+                                }`}
+                            >
+                                <div className="mb-5 flex items-center justify-between">
+                                <span className="text-sm font-semibold tracking-wider text-[#D2223E]">
+                                    {stage.number}
+                                </span>
+
+                                <span className="h-px w-10 bg-[#D2223E]/50 transition-all duration-300 group-hover:w-16 group-hover:bg-[#D2223E]" />
+                                </div>
+
+                                <h3 className="text-xl font-semibold tracking-tight text-[#223752] transition-colors duration-300 group-hover:text-[#D2223E] sm:text-2xl">
+                                {stage.title}
+                                </h3>
+
+                                <p className="mt-3 max-w-sm text-sm leading-6 text-[#526174] sm:text-base sm:leading-7">
+                                {stage.description}
+                                </p>
+                            </article>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* END MY APPROACH SECTION */}
+
 
         </main>
     );
